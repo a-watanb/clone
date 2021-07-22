@@ -403,6 +403,17 @@ public class Lexer {
 
   }
 
+	public static boolean Symbol(String[] Buffer , int i) {
+
+	for(int j=0 ;j < Symbol.length;j++) {
+		if(Buffer[i].equals(Symbol[j])) {
+			return true;
+		}
+	}
+	return false;
+
+	}
+
 	public static int Number(String[] Buffer , int i) {
 
 		for(int j=0; j< Num.length;j++) {
