@@ -392,28 +392,25 @@ public class Lexer {
 		return Token;
 	}
 
-	public static int isSymbol(String[] Buffer , int i) {
+	public static String Symbol(String[] Buffer , int i) {
 
-		for(int j=0 ;j < Symbol.length;j++) {
-			if(Buffer[i].equals(Symbol[j])) {
-				return Integer.parseInt(Buffer[i]);
+	for(int j=0 ;j < Symbol.length;j++) {
+		if(Buffer[i].equals(Symbol[j])) {
+			return Symbol[j];
+		}
+	}
+	return "error";
+
+  }
+
+	public static int Number(String[] Buffer , int i) {
+
+		for(int j=0; j< Num.length;j++) {
+			if(Buffer[i].equals(Num[j])){
+				return Integer.parseInt(Num[j]);
 			}
 		}
 		return -1;
-
-	}
-
-	public static boolean isNumber(String[] Buffer , int i) {
-
-		for(int j=0; j< 10;j++) {
-			if(Buffer[i].equals(Num[j])){
-				return true;
-			}
-		}
-
-
-		return false;
-
 	}
 
 	public static boolean isAlpha(String[] Buffer , int i) {		//A-Z,a-zの時だけtrue
