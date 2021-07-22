@@ -392,17 +392,6 @@ public class Lexer {
 		return Token;
 	}
 
-	public static boolean isSymbol(String[] Buffer , int i) {
-
-		for(int j=0 ;j < Symbol.length;j++) {
-			if(Buffer[i].equals(Symbol[j])) {
-				return true;
-			}
-		}
-		return false;
-
-	}
-
 	public static int isSymbol(String[] Buffer , int i) {
 
 		for(int j=0 ;j < Symbol.length;j++) {
